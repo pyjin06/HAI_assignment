@@ -15,7 +15,7 @@ train_ds = datasets.MNIST(root="data", train=True, download=True, transform=tran
 test_ds = datasets.MNIST(root="data", train=False, download=True, transform=transform)
 
 train_loader = DataLoader(train_ds, batch_size=64, shuffle=True)
-test_loader = DataLoader(test_ds, batch_size=1000,shuffle=True)
+test_loader = DataLoader(test_ds, batch_size=1000,shuffle=False)
 
 class Mymodule(nn.Module):
     def __init__(self):
